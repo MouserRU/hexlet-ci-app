@@ -1,5 +1,6 @@
 jobs:
   build:
+    runs-on: ubuntu-latest
     lint:
       # Запускаем линтер
       -lint: make lint
