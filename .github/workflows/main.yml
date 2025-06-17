@@ -2,6 +2,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -lint: make lint
-      -test: make test
-      -setup: make setup
+      - run: make lint
+      - run: make test
+      - run: make setup
