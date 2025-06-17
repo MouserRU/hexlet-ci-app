@@ -1,14 +1,7 @@
 jobs:
   build:
     runs-on: ubuntu-latest
-    lint:
-      # Запускаем линтер
+    steps:
       -lint: make lint
-    test:
-      # Запускаем test после успешной проверки линтером
-      needs: linter
       -test: make test
-    setup:
-      # После успешного прохождения теста, запускаем процесс сборки и установки
-      needs: test
       -setup: make setup
